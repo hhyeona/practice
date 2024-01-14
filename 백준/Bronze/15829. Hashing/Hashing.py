@@ -2,20 +2,21 @@
 Hashing
 r = 31
 M = 1234567891
+--
+a 아스키코드 97 이라서 -96 해주면 1 로 할당가능.
+alphabe * r ^ i Mod M
 '''
+M = 1234567891
+r = 31
+
 L = int(input())
-st = input()
-alpha = 'zabcdefghijklmnopqrstuvwxyz'
-al_list = list(str(alpha))
-st_list = []
+al = input()
+
 ans = 0
-for j in range(L):
-    for i in range(1,27):
-        if st[j] == al_list[i]:
-            st_list.append(i)
+for i in range(len(al)):
+    num = ord(al[i]) - 96
+    ans += num * (r**i)
 
-for k in range(L):
-    ans += st_list[k] * (31**k)
+print(ans %  M)
 
-print(ans)
 
