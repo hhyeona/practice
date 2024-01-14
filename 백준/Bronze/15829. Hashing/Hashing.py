@@ -18,3 +18,4 @@ for k in range(L):
     ans += st_list[k] * (31**k)
 
 print(ans)
+
