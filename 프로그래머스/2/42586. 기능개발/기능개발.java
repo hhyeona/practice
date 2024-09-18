@@ -22,8 +22,9 @@ class Solution {
             }
             
         }
+//         마지막 sum 추가. (for문 다 끝난 후!!!)
         answer.add(sum);
-        
+
         
         return answer.stream().mapToInt(i->i).toArray();
     }
