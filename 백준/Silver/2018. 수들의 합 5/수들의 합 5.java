@@ -21,7 +21,7 @@ public class Main {
                 end++;
                 sm += end;
             } else if (sm > n) {
-                sm -= start-1;
+                sm -= start;
                 start++;
 
             }
